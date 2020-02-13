@@ -1,5 +1,4 @@
 RDEPENDS_packagegroup-rdk-media-common_remove = "virtual/ea-games-provider"
-RDEPENDS_packagegroup-rdk-media-common_remove = "bluetooth-leappmgr"
 
 RDEPENDS_packagegroup-rdk-media-common_append = " rfc"
 RDEPENDS_packagegroup-rdk-media-common_append = " rdm"
