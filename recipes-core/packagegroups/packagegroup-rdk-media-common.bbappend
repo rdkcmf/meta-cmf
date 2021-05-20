@@ -1,0 +1,18 @@
+RDEPENDS_packagegroup-rdk-media-common_remove = "virtual/ea-games-provider"
+RDEPENDS_packagegroup-rdk-media-common_remove = "bluetooth-leappmgr"
+
+RDEPENDS_packagegroup-rdk-media-common_append = " rfc"
+RDEPENDS_packagegroup-rdk-media-common_append = " rdm"
+RDEPENDS_packagegroup-rdk-media-common_append = " memstress"
+RDEPENDS_packagegroup-rdk-media-common_append = " rdkat"
+RDEPENDS_packagegroup-rdk-media-common_append = " cpuprocanalyzer"
+RDEPENDS_packagegroup-rdk-media-common_append = " libunpriv"
+RDEPENDS_packagegroup-rdk-media-common_append = " ctrlm-main"
+RDEPENDS_packagegroup-rdk-media-common_append = " xr-atomic"
+RDEPENDS_packagegroup-rdk-media-common_append_morty = " xr-fdc"
+RDEPENDS_packagegroup-rdk-media-common_append_morty = " xdialserver"
+
+RDEPENDS_packagegroup-rdk-media-common_append = "\
+   ${@bb.utils.contains("DISTRO_FEATURES", "bluez5", "bluez5-bluetoothd","",d)} \
+   ${@bb.utils.contains("DISTRO_FEATURES", "rdkbrowser2", "rdkbrowser2","",d)} \
+   "
