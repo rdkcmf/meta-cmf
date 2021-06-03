@@ -91,6 +91,7 @@ EXTERNALSRC_pn-iarmmgrs-hal-headers = "${@'${RDK_ROOT_PATH}/rdk/components/gener
 EXTERNALSRC_pn-iarmmgrs-hal-raspberrypi = "${@'${RDK_ROOT_PATH}/rdk/devices/raspberrypi/iarmmgrs' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/raspberrypi/iarmmgrs')) else ''}"
 EXTERNALSRC_pn-injectedbundle = "${@'${RDK_ROOT_PATH}/rdk/components/generic/injectedbundle' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/injectedbundle')) else ''}"
 EXTERNALSRC_pn-jst = "${@'${RDK_ROOT_PATH}/rdk/components/generic/jst' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/jst')) else ''}"
+EXTERNALSRC_pn-json-hal-lib = "${@'${RDK_ROOT_PATH}/rdkb/components/generic/json-rpc' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/generic/json-rpc')) else ''}"
 EXTERNALSRC_pn-key-simulator = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/key_simulator' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/key_simulator')) else ''}"
 EXTERNALSRC_pn-ledmgr = "${@'${RDK_ROOT_PATH}/rdk/components/generic/ledmgr' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/ledmgr')) else ''}"
 EXTERNALSRC_pn-ledmgr-camera = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/ledmgr' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/components/opensource/ledmgr')) else ''}"
