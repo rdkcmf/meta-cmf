@@ -126,6 +126,7 @@ EXTERNALSRC_pn-rdkat = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkat' if (o
 EXTERNALSRC_pn-rdkbrowser = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser')) else ''}"
 EXTERNALSRC_pn-rdkbrowser2 = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser2' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser2')) else ''}"
 EXTERNALSRC_pn-rdkbrowserplatx86 = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser/platform/rdkemulator' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser/platform/rdkemulator')) else ''}"
+EXTERNALSRC_pn-rdkgponmanager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkGponManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkGponManager')) else ''}"
 EXTERNALSRC_pn-rdkmediaplayer = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkmediaplayer' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkmediaplayer')) else ''}"
 EXTERNALSRC_pn-rdkresidentapp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/appmanager' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/appmanager')) else ''}"
 EXTERNALSRC_pn-rdkshell = "${@'${RDK_ROOT_PATH}/components/opensource/RDKShell' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/RDKShell')) else ''}"
