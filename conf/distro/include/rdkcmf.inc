@@ -1,3 +1,4 @@
+BBMASK .= "|meta-rdk/recipes-extended/jquery/"
 
 MAINTAINER = "RDK CMF Team <support@rdkcentral.com>"
 
