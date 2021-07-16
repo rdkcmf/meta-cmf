@@ -10,7 +10,7 @@ RDEPENDS_packagegroup-rdk-media-common_append = " ctrlm-main"
 RDEPENDS_packagegroup-rdk-media-common_append = " xr-atomic"
 RDEPENDS_packagegroup-rdk-media-common_append = " xraudio-utils"
 RDEPENDS_packagegroup-rdk-media-common_append_morty = " xr-fdc"
-RDEPENDS_packagegroup-rdk-media-common_append_morty = " xdialserver"
+RDEPENDS_packagegroup-rdk-media-common_append = " xdialserver"
 
 RDEPENDS_packagegroup-rdk-media-common_append = "\
    ${@bb.utils.contains("DISTRO_FEATURES", "bluez5", "bluez5-bluetoothd","",d)} \
