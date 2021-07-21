@@ -137,6 +137,7 @@ EXTERNALSRC_pn-rdkxdslmanager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource
 EXTERNALSRC_pn-rdkmediaplayer = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkmediaplayer' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkmediaplayer')) else ''}"
 EXTERNALSRC_pn-rdkresidentapp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/appmanager' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/appmanager')) else ''}"
 EXTERNALSRC_pn-rdkshell = "${@'${RDK_ROOT_PATH}/components/opensource/RDKShell' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/RDKShell')) else ''}"
+EXTERNALSRC_pn-rdktelcovoicemanager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkTelcoVoiceManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkTelcoVoiceManager')) else ''}"
 EXTERNALSRC_pn-rdkversion = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkversion' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkversion')) else ''}"
 EXTERNALSRC_pn-rdkx-logger = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkx_logger' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkx_logger')) else ''}"
 EXTERNALSRC_pn-rdm = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdm' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdm')) else ''}"
