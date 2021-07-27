@@ -107,6 +107,7 @@ EXTERNALSRC_pn-memstress = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_
 EXTERNALSRC_pn-mesh-agent = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/MeshAgent' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/MeshAgent')) else ''}"
 EXTERNALSRC_pn-mfr-data = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/mfr_data' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/mfr_data')) else ''}"
 EXTERNALSRC_pn-mfr-utils = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/mfr_utils' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/mfr_utils')) else ''}"
+EXTERNALSRC_pn-mfrlib-emulator = "${@'${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/mfrlibs' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/mfrlibs')) else ''}"
 EXTERNALSRC_pn-mfrlibs-rpi = "${@'${RDK_ROOT_PATH}/rdk/devices/raspberrypi/mfrlibs' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/raspberrypi/mfrlibs')) else ''}"
 EXTERNALSRC_pn-moca-hal = "${@'${RDK_ROOT_PATH}/rdk/components/generic/mocahal' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/mocahal')) else ''}"
 EXTERNALSRC_pn-moca-hal-noop = "${@'${RDK_ROOT_PATH}/rdk/components/generic/mocahal' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/mocahal')) else ''}"
