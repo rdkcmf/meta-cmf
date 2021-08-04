@@ -90,6 +90,7 @@ EXTERNALSRC_pn-iarmmgrs-hal-emulator = "${@'${RDK_ROOT_PATH}/rdk/devices/intel-x
 EXTERNALSRC_pn-iarmmgrs-hal-headers = "${@'${RDK_ROOT_PATH}/rdk/components/generic/iarmmgrs' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/iarmmgrs')) else ''}"
 EXTERNALSRC_pn-iarmmgrs-hal-raspberrypi = "${@'${RDK_ROOT_PATH}/rdk/devices/raspberrypi/iarmmgrs' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/raspberrypi/iarmmgrs')) else ''}"
 EXTERNALSRC_pn-injectedbundle = "${@'${RDK_ROOT_PATH}/rdk/components/generic/injectedbundle' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/injectedbundle')) else ''}"
+EXTERNALSRC_pn-ipoe-health-check = "${@'${RDK_ROOT_PATH}/rdk/components/opensource/ipoe_health_check' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/opensource/ipoe_health_check')) else ''}"
 EXTERNALSRC_pn-jst = "${@'${RDK_ROOT_PATH}/rdk/components/generic/jst' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/jst')) else ''}"
 EXTERNALSRC_pn-json-hal-lib = "${@'${RDK_ROOT_PATH}/rdkb/components/generic/json-rpc' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/generic/json-rpc')) else ''}"
 EXTERNALSRC_pn-key-simulator = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/key_simulator' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/key_simulator')) else ''}"
