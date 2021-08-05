@@ -124,6 +124,7 @@ EXTERNALSRC_pn-rbus-core = "${@'${RDK_ROOT_PATH}/components/opensource/rbuscore'
 EXTERNALSRC_pn-rdk-diagnostics = "${@'${RDK_ROOT_PATH}/rdk/components/generic/diagnostics/QAM_device' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/diagnostics')) else ''}"
 EXTERNALSRC_pn-rdk-gstreamer-utils = "${@'${RDK_ROOT_PATH}/rdk/components/generic/gstreamer-direct-platform' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/gstreamer-direct-platform')) else ''}"
 EXTERNALSRC_pn-rdk-logger = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdk_logger' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdk_logger')) else ''}"
+EXTERNALSRC_pn-rdk-oss-ssa = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkssa' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkssa')) else ''}"
 EXTERNALSRC_pn-rdk-wanmanager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkWanManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkWanManager')) else ''}"
 EXTERNALSRC_pn-rdkapps = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser/rdkapps' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkbrowser/rdkapps')) else ''}"
 EXTERNALSRC_pn-rdkat = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdkat' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdkat')) else ''}"
