@@ -73,6 +73,7 @@ EXTERNALSRC_pn-gst-plugins-playersinkbin-rpi = "${@'${RDK_ROOT_PATH}/rdk/devices
 EXTERNALSRC_pn-gst-plugins-rdk = "${@'${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk')) else ''}"
 EXTERNALSRC_pn-gst-plugins-rdk-aamp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk-aamp' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk-aamp')) else ''}"
 EXTERNALSRC_pn-gstqamtunersrc = "${@'${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/gst-plugins-rdk/qamtunersrc' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/gst-plugins-rdk/qamtunersrc')) else ''}"
+EXTERNALSRC_pn-hal-wifi-cfg80211 = "${@'${RDK_ROOT_PATH}/components/opensource/hal-wifi-cfg80211/source/wifi' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/hal-wifi-cfg80211')) else ''}"
 EXTERNALSRC_pn-hal-wifi-turris = "${@'${RDK_ROOT_PATH}/rdkb/devices/turris/hal/source/wifi' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/devices/turris/hal')) else ''}"
 EXTERNALSRC_pn-halinterface = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/halinterface' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/halinterface')) else ''}"
 EXTERNALSRC_pn-harvester = "${@'${RDK_ROOT_PATH}/rdkb/components/generic/harvester' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/generic/harvester')) else ''}"
