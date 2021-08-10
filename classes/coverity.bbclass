@@ -20,3 +20,26 @@ do_compile_prepend () {
         fi
     fi
 }
+
+do_compile_append () {
+    COVERITY_REQUIRED="${@d.getVar('COVERITY_REQUIRED', True)}"
+    if [ "${COVERITY_REQUIRED}" = "1" ] ;then
+
+        COVERITY_COMPONENT_NAME="${@d.getVar('COVERITY_COMPONENT_NAME', True)}"
+        if [ "${COVERITY_COMPONENT_NAME}" = "${PN}" ]; then
+
+            # Check that the previous build did not generate the Coverity data
+            if [ ! -d ${TOPDIR}/../build-images/${COVERITY_COMPONENT_NAME} ]; then
+
+                # Check that the build is a cmake build
+                if [ -f ${S}/CMakeLists.txt ]; then
+                    bbnote "Coverity rebuild cmake"
+
+                    COVERITY_CONFIG="${@d.getVar('COVERITY_CONFIG', True)}"
+                    COVERITY_PATH="${@d.getVar('COVERITY_PATH', True)}"
+                    ${COVERITY_PATH}/cov-build --config ${COVERITY_CONFIG} --dir ${TOPDIR}/../build-images/${COVERITY_COMPONENT_NAME} cmake --build '${B}' --clean-first --target all
+                fi
+            fi
+        fi
+    fi
+}
