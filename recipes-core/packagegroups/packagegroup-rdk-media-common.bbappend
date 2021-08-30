@@ -16,7 +16,8 @@ RDEPENDS_packagegroup-rdk-media-common_append = "\
    ${@bb.utils.contains("DISTRO_FEATURES", "bluez5", "bluez5-bluetoothd","",d)} \
    ${@bb.utils.contains("DISTRO_FEATURES", "rdkbrowser2", "rdkbrowser2","",d)} \
    "
-RDEPENDS_packagegroup-rdk-media-common_remove = "\
-   ${@bb.utils.contains("DISTRO_FEATURES", "ipclient", "xdialserver","",d)}"
 
+RDEPENDS_packagegroup-rdk-media-common_remove = "\
+   ${@bb.utils.contains('DISTRO_FEATURES', 'ipclient',\
+   '${@bb.utils.contains("DISTRO_FEATURES", "bluetooth", "virtual/media-utils", "", d)}', '', d)}"
 ~  
