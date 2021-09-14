@@ -199,4 +199,5 @@ EXTERNALSRC_pn-xraudio = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xraudio' i
 EXTERNALSRC_pn-xraudio-utils = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xraudio-utils' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xraudio-utils')) else ''}"
 EXTERNALSRC_pn-xraudioh = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xraudio' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xraudio')) else ''}"
 EXTERNALSRC_pn-xupnp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xupnp' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xupnp')) else ''}"
+EXTERNALSRC_pn-zilker-sdk = "${@'${RDK_ROOT_PATH}/components/opensource/zilker-sdk' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/zilker-sdk')) else ''}"
 
