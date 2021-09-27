@@ -13,6 +13,7 @@ EXTERNALSRC_pn-aampmetrics = "${@'${RDK_ROOT_PATH}/rdk/components/generic/aampme
 EXTERNALSRC_pn-analyzers-host = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/analyzers/scripts/host' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/analyzers/scripts/host')) else ''}"
 EXTERNALSRC_pn-analyzers-target = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/analyzers/scripts/target' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/analyzers/scripts/target')) else ''}"
 EXTERNALSRC_pn-appmanager = "${@'${RDK_ROOT_PATH}/rdk/components/generic/appmanager' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/appmanager')) else ''}"
+EXTERNALSRC_pn-asbluetoothrcu = "${@'${RDK_ROOT_PATH}/rdk/components/generic/blercudaemon' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/blercudaemon')) else ''}"
 EXTERNALSRC_pn-audiocapturemgr = "${@'${RDK_ROOT_PATH}/rdk/components/generic/audiocapturemgr' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/audiocapturemgr')) else ''}"
 EXTERNALSRC_pn-bluetooth-core = "${@'${RDK_ROOT_PATH}/rdk/components/generic/bluetooth' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/bluetooth')) else ''}"
 EXTERNALSRC_pn-bluetooth-leappmgr = "${@'${RDK_ROOT_PATH}/rdk/components/generic/bluetooth_leAppMgr' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/bluetooth_leAppMgr')) else ''}"
