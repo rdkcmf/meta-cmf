@@ -13,12 +13,9 @@ RDEPENDS_packagegroup-rdk-media-common_append_morty = " xr-fdc"
 RDEPENDS_packagegroup-rdk-media-common_append = " xdialserver"
 RDEPENDS_packagegroup-rdk-media-common_append = " dibbler-client"
 
-RDEPENDS_packagegroup-rdk-media-common_append_dunfell = "\
-   ${@bb.utils.contains("DISTRO_FEATURES", "bluez5", "asbluetoothrcu","",d)} \
-   "
-
 RDEPENDS_packagegroup-rdk-media-common_append = "\
    ${@bb.utils.contains("DISTRO_FEATURES", "bluez5", "bluez5-bluetoothd","",d)} \
+   ${@bb.utils.contains("DISTRO_FEATURES", "bluez5", "asbluetoothrcu","",d)} \
    ${@bb.utils.contains("DISTRO_FEATURES", "rdkbrowser2", "rdkbrowser2","",d)} \
    "
 
