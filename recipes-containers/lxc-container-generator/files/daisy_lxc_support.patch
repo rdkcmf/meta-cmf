@@ -1,0 +1,30 @@
+Date: Jun 11, 2019 8:47 PM
+
+From: da4f98395e94f8bdd43acc7e77adc7f582b446d9 May 15, 2019 2:01 AM
+
+Subject: [PATCH] CPC-2336: non-root LXC support for daisy
+
+	From latest CMF repo,daisy is not supported for non-root LXC. Added daisy support in comcast layer for LXC support
+     
+Source: COMCAST
+
+License: LGPL-2.0-or-later
+
+Upstream-Status: Pending 
+
+Signed-off-by: gpandi548 <Gowtham_Pandi@comcast.com>
+---
+
+Index: git/src/conf/config.ini
+===================================================================
+--- git.orig/src/conf/config.ini
++++ git/src/conf/config.ini
+@@ -29,7 +29,7 @@ version = debug, release, production
+ 
+ # Legacy tags (appends in platfrom layers )
+ SOC_VER = UNKNOWN, arm_16.3, arm_16.4, mipsel_16.3, mipsel_16.4, i686, mipsel_18.1, arm_18.1, arm_18.2, arm_18.3, arm_19.1, arm_19.2
+-OE_VER = 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4
++OE_VER = 1.6, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4
+ 
+ [RANGE]
+ RDK_VER =

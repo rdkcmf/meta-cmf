@@ -1,0 +1,30 @@
+From 3dfe5e845b1f6ec2fcef9a9942f14fdc9cf21397 Mon Sep 17 00:00:00 2001
+From: Khem Raj <raj.khem@gmail.com>
+Date: Sat, 28 Mar 2020 00:02:59 +0000
+Subject: [PATCH] config: Add dunfell ( yocto 3.1 ) to supported releases
+
+Source: COMCAST
+License: LGPLv2
+Upstream-Status: Pending
+
+Signed-off-by: Khem Raj <raj.khem@gmail.com>
+---
+ src/conf/config.ini | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/conf/config.ini b/src/conf/config.ini
+index 88c204c..1ca76f7 100644
+--- a/src/conf/config.ini
++++ b/src/conf/config.ini
+@@ -29,7 +29,7 @@ version = debug, release, production
+ 
+ # Legacy tags (appends in platfrom layers )
+ SOC_VER = UNKNOWN, arm_16.3, arm_16.4, mipsel_16.3, mipsel_16.4, i686, mipsel_18.1, arm_18.1, arm_18.2, arm_18.3, arm_19.1, arm_19.2
+-OE_VER = 1.6, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4
++OE_VER = 1.6, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 3.1
+ 
+ [RANGE]
+ RDK_VER =
+-- 
+2.17.1
+

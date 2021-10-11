@@ -1,0 +1,53 @@
+Date: Tue, 14 May 2019 16:00:21 -0400
+
+From: bd53a37cd6c2332df7b422b0830699701c5895bc Mon Sep 17 00:00:00 2001
+
+Subject: [PATCH] DELIA-31917: Converted Error to Warning.
+
+	1)we need to provide a way to share complete
+        directories till we have the functionality working.
+        There has to be a way provided in the framework for it.
+        At this point it is missing hence  we are patching to
+        allow it for now till there is a new change in framework.
+        2)Refactoring LXC patches to comcast layer.
+        3)Using weak assignment baseline LXC version to may 14,2019 CMF version
+     
+Source: COMCAST
+
+License: LGPL-2.0-or-later
+
+Upstream-Status: Pending
+
+Signed-off-by: Balaji Punnuru <balaji_punnuru@cable.comcast.com>
+---
+ src/lib/config.py | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/src/lib/config.py b/src/lib/config.py
+index 273307b..b7994ef 100644
+--- a/src/lib/config.py
++++ b/src/lib/config.py
+@@ -21,6 +21,7 @@ import re
+ from dbus import cDbus
+ from cgroup import cCgroup
+ from sanity_check import cSanityCheck
++from logging import cLog
+ 
+ ################################################################################
+ #   class cConfig(object):
+@@ -426,6 +427,12 @@ class cConfig(object):
+                 if (self.sanityCheck.validateAutoMount(autoMount)):
+                     conf_fd.write("\nlxc.mount.auto = %s\n"%(autoMount.text));
+ 
++            print("[%s] Create LXC logging configuration"%(self.sanityCheck.getName()))
++            log = cLog(self.rootfs)
++            logConfig = log.createLoggingConf(lxcConfigNode.find("Logging"), lxcConfigNode.find("UserName"))
++            conf_fd.write(logConfig);
++
++
+         else:
+             conf_fd.write("\nlxc.autodev = 0\n")
+ 
+-- 
+2.1.4
+

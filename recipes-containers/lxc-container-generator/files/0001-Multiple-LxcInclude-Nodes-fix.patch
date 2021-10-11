@@ -1,0 +1,34 @@
+From f673e540447147dbb5f663de3673bfef95fa10ea Mon Sep 17 00:00:00 2001
+From: Balaji Punnuru <balaji_punnuru@cable.comcast.com>
+Upstream-Status: Pending
+License: Apache-2.0
+Source: COMCAST
+Date: Tue, 27 Aug 2019 17:31:52 -0400
+Subject: [PATCH] Multiple LxcInclude Nodes fix.
+
+Change-Id: I1bf8c227be57989dd8058f42caead004943620aa
+Signed-off-by: Balaji Punnuru <balaji_punnuru@cable.comcast.com>
+---
+ src/lib/config.py | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/lib/config.py b/src/lib/config.py
+index b7994ef..c90e7a9 100644
+--- a/src/lib/config.py
++++ b/src/lib/config.py
+@@ -396,9 +396,9 @@ class cConfig(object):
+         networkConfig = self.createNetworkConf(lxcConfigNode);
+         conf_fd.write(networkConfig);
+ 
+-        lxcInclude = lxcConfigNode.find("LxcInclude");
+-        if (self.sanityCheck.validateTextEntry(lxcInclude)):
+-            conf_fd.write("lxc.include = %s\n"% lxcInclude.text)
++        for lxcInclude in lxcConfigNode.findall("LxcInclude"):
++            if (self.sanityCheck.validateTextEntry(lxcInclude)):
++                    conf_fd.write("lxc.include = %s\n"% lxcInclude.text)
+ 
+         print("[%s] Create LXC Environment configuration"%(self.sanityCheck.getName()))
+         envInfo = self.createEnvConf(lxcConfigNode);
+-- 
+2.1.4
+

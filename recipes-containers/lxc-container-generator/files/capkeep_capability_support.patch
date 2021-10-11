@@ -1,0 +1,40 @@
+Date: Tue, 14 May 2019 16:00:21 -0400
+
+From: bd53a37cd6c2332df7b422b0830699701c5895bc Mon Sep 17 00:00:00 2001
+
+Subject: [PATCH] DELIA-31917: Converted Error to Warning.
+
+        1)we need to provide a way to share complete
+        directories till we have the functionality working.
+        There has to be a way provided in the framework for it.
+        At this point it is missing hence  we are patching to
+        allow it for now till there is a new change in framework.
+        2)Refactoring LXC patches to comcast layer.
+        3)Using weak assignment baseline LXC version to may 14,2019 CMF version
+
+Source: COMCAST
+
+License: LGPL-2.0-or-later
+
+Upstream-Status: Pending
+
+Signed-off-by: Balaji Punnuru <balaji_punnuru@cable.comcast.com>
+---
+
+Index: git/src/lib/rootfs.py
+===================================================================
+--- git.orig/src/lib/rootfs.py
++++ git/src/lib/rootfs.py
+@@ -181,6 +181,12 @@ class cRootfs(object):
+         if error:
+             raise Exception("program returned error code {%s}"%(error))
+ 
++        # set exec permission for rootfs directory for capkeep capabilities support
++        linux_cmd = "chmod o+x %s"%self.getPathRootfsHost()
++        error = os.system(linux_cmd)
++        if error:
++            raise Exception("program returned error code {%s}"%(error))
++
+         # set proper rights for container launcher
+         if (self.launcherName != None and self.launcherName != " "):
+             linux_cmd = "chmod 550 %s -R "%self.getLauncherFileHost()
