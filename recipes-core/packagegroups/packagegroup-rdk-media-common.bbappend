@@ -15,7 +15,7 @@ RDEPENDS_packagegroup-rdk-media-common_append = " dibbler-client"
 
 RDEPENDS_packagegroup-rdk-media-common_append = "\
    ${@bb.utils.contains("DISTRO_FEATURES", "bluez5", "bluez5-bluetoothd","",d)} \
-   ${@bb.utils.contains("DISTRO_FEATURES", "bluez5", "asbluetoothrcu","",d)} \
+   ${@bb.utils.contains("DISTRO_FEATURES", "blercudaemon", "asbluetoothrcu","",d)} \
    ${@bb.utils.contains("DISTRO_FEATURES", "rdkbrowser2", "rdkbrowser2","",d)} \
    "
 
