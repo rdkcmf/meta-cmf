@@ -68,6 +68,7 @@ EXTERNALSRC_pn-diagnostics-snmp2json = "${@'${RDK_ROOT_PATH}/rdk/components/gene
 EXTERNALSRC_pn-dtcpmgr-noop = "${@'${RDK_ROOT_PATH}/rdk/components/generic/dtcp' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/dtcp')) else ''}"
 EXTERNALSRC_pn-fsc = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/FirmwareSanity' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/FirmwareSanity')) else ''}"
 EXTERNALSRC_pn-gdbus-client = "${@'${RDK_ROOT_PATH}/components/opensource/gdbus-client' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/gdbus-client')) else ''}"
+EXTERNALSRC_pn-gst-external-plugin = "${@'${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk/src/external' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk')) else ''}"
 EXTERNALSRC_pn-gst-plugins-playersinkbin-emulator = "${@'${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/gst-plugins-rdk/playersinkbin' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/intel-x86-pc/rdkemulator/gst-plugins-rdk/playersinkbin')) else ''}"
 EXTERNALSRC_pn-gst-plugins-playersinkbin-rpi = "${@'${RDK_ROOT_PATH}/rdk/devices/raspberrypi/gst-plugins-rdk/playersinkbin' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/devices/raspberrypi/gst-plugins-rdk/playersinkbin')) else ''}"
 EXTERNALSRC_pn-gst-plugins-rdk = "${@'${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/gst-plugins-rdk')) else ''}"
