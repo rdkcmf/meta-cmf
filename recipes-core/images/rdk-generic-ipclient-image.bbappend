@@ -1,4 +1,5 @@
 #REFPLTV-976 removing the Control Manager service, as feature not fully functional.
+require add-non-root-user-group.inc
 ROOTFS_POSTPROCESS_COMMAND += "remove_systemd_ctrlm_services; "
 ROOTFS_POSTPROCESS_COMMAND += "remove_Failure_case_dsmgr_services; "
 

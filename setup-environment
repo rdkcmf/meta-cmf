@@ -116,6 +116,14 @@ BBLAYERS =+ "\${RDKROOT}/meta-rdk-voice-sdk"
 EOF
 fi
 
+# Add meta-srcmap only if not already present.
+if [ $(grep '^BBLAYERS' conf/bblayers.conf | grep -c 'meta-srcmap') -eq 0 -a -d  $TOP_DIR/meta-srcmap ]
+then
+    cat >> conf/bblayers.conf <<EOF
+BBLAYERS =+ "\${RDKROOT}/meta-srcmap"
+EOF
+fi
+
 #for capturing the timestamp
 CPC_CUSTOM_STAMP=`/bin/date -u +%Y%m%d%H%M%S`
 echo 'CPC_CUSTOM_STAMP = "'${CPC_CUSTOM_STAMP}'"' >> conf/auto.conf
