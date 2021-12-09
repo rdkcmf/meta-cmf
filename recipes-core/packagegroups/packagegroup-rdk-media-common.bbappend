@@ -13,6 +13,7 @@ RDEPENDS_packagegroup-rdk-media-common_append_morty = " xr-fdc"
 RDEPENDS_packagegroup-rdk-media-common_append = " xdialserver"
 RDEPENDS_packagegroup-rdk-media-common_append = " dibbler-client"
 RDEPENDS_packagegroup-rdk-media-common_append = " gst-external-plugin"
+RDEPENDS_packagegroup-rdk-media-common_append = " waymetric"
 
 RDEPENDS_packagegroup-rdk-media-common_append = "\
    ${@bb.utils.contains("DISTRO_FEATURES", "bluez5", "bluez5-bluetoothd","",d)} \
