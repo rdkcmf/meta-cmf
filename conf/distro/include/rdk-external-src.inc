@@ -171,6 +171,7 @@ EXTERNALSRC_pn-tts = "${@'${RDK_ROOT_PATH}/rdk/components/generic/ttsengine' if 
 EXTERNALSRC_pn-udhcpc-opt43 = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/udhcpc-opt43' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/udhcpc-opt43')) else ''}"
 EXTERNALSRC_pn-usbctrl = "${@'${RDK_ROOT_PATH}/rdk/components/generic/libusbctrl' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/libusbctrl')) else ''}"
 EXTERNALSRC_pn-utopia = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/Utopia' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/Utopia')) else ''}"
+EXTERNALSRC_pn-waymetric = "${@'${RDK_ROOT_PATH}/components/opensource/waymetric' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/waymetric')) else ''}"
 EXTERNALSRC_pn-webconfig-framework = "${@'${RDK_ROOT_PATH}/rdk/components/generic/WebconfigFramework' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/WebconfigFramework')) else ''}"
 EXTERNALSRC_pn-westeros = "${@'${RDK_ROOT_PATH}/components/opensource/westeros' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/westeros')) else ''}"
 EXTERNALSRC_pn-westeros-soc-drm = "${@'${RDK_ROOT_PATH}/components/opensource/westeros/drm' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/westeros')) else ''}"
