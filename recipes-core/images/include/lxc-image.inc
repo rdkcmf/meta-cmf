@@ -9,6 +9,4 @@ def get_lxc_classes(d):
 
 inherit ${@get_lxc_classes(d)}
 
-#require recipes-core/images/include/add-users-groups-file-owners-and-permissions.inc
-
 IMAGE_INSTALL_append_lxcsecure = " packagegroup-lxc-secure-containers "
