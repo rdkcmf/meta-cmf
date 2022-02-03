@@ -150,6 +150,7 @@ EXTERNALSRC_pn-rms = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/rms' if (o
 EXTERNALSRC_pn-rpcserver = "${@'${RDK_ROOT_PATH}/components/opensource/rpcserver' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/rpcserver')) else ''}"
 EXTERNALSRC_pn-rtmessage = "${@'${RDK_ROOT_PATH}/rdk/components/opensource/rtmessage' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/opensource/rtmessage')) else ''}"
 EXTERNALSRC_pn-si-cache-parser = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/si_cache_parser' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/si_cache_parser')) else ''}"
+EXTERNALSRC_pn-skillmapper = "${@'${RDK_ROOT_PATH}/rdk/components/generic/avs/alexa_skill_mapper' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/avs/alexa_skill_mapper')) else ''}"
 EXTERNALSRC_pn-sso = "${@'${RDK_ROOT_PATH}/rdkb/components/generic/sso' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/generic/sso')) else ''}"
 EXTERNALSRC_pn-start-parodus = "${@'${RDK_ROOT_PATH}/rdkb/components/generic/startParodus' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/generic/startParodus')) else ''}"
 EXTERNALSRC_pn-sys-resource = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/sys_resource' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/sys_resource')) else ''}"
