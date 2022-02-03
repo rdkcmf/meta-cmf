@@ -120,6 +120,7 @@ EXTERNALSRC_pn-ovs-agent = "${@'${RDK_ROOT_PATH}/rdk/components/generic/OvsAgent
 EXTERNALSRC_pn-plugins = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/plugins' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/components/opensource/plugins')) else ''}"
 EXTERNALSRC_pn-power-state-monitor = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/power-state-monitor' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/power-state-monitor')) else ''}"
 EXTERNALSRC_pn-powermgr = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/PowerManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/PowerManager')) else ''}"
+EXTERNALSRC_pn-pwstream = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/pwstream' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/components/opensource/pwstream')) else ''}"
 EXTERNALSRC_pn-qtapp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/trm/qtapp/srv' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/trm')) else ''}"
 EXTERNALSRC_pn-rbus = "${@'${RDK_ROOT_PATH}/components/opensource/rbus' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/rbus')) else ''}"
 EXTERNALSRC_pn-rbus-core = "${@'${RDK_ROOT_PATH}/components/opensource/rbuscore' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/rbuscore')) else ''}"
