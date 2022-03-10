@@ -126,6 +126,7 @@ EXTERNALSRC_pn-qtapp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/trm/qtapp/sr
 EXTERNALSRC_pn-rbus = "${@'${RDK_ROOT_PATH}/components/opensource/rbus' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/rbus')) else ''}"
 EXTERNALSRC_pn-rbus-core = "${@'${RDK_ROOT_PATH}/components/opensource/rbuscore' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/rbuscore')) else ''}"
 EXTERNALSRC_pn-rdk-diagnostics = "${@'${RDK_ROOT_PATH}/rdk/components/generic/diagnostics/QAM_device' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/diagnostics')) else ''}"
+EXTERNALSRC_pn-rdk-easymesh-controller = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkEasyMeshController' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkEasyMeshController')) else ''}"
 EXTERNALSRC_pn-rdk-fwupgrade-manager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkPlatformManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkPlatformManager')) else ''}"
 EXTERNALSRC_pn-rdk-gstreamer-utils = "${@'${RDK_ROOT_PATH}/rdk/components/opensource/gstreamer-direct-platform' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/opensource/gstreamer-direct-platform')) else ''}"
 EXTERNALSRC_pn-rdk-logger = "${@'${RDK_ROOT_PATH}/rdk/components/generic/rdk_logger' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/rdk_logger')) else ''}"
