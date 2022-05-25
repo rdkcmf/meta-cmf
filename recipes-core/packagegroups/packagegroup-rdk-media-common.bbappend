@@ -23,4 +23,4 @@ RDEPENDS_packagegroup-rdk-media-common_append = "\
    ${@bb.utils.contains("DISTRO_FEATURES", "rdkbrowser2", "rdkbrowser2","",d)} \
    "
 
-RDEPENDS_packagegroup-rdk-media-common_remove = "${@bb.utils.contains('DISTRO_FEATURES', 'ipclient', 'virtual/media-utils', '', d)}"
+RDEPENDS_packagegroup-rdk-media-common_remove_ipclient = "virtual/media-utils"
