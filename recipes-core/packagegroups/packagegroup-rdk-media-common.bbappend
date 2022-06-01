@@ -14,10 +14,13 @@ RDEPENDS_packagegroup-rdk-media-common_append = " xdialserver"
 RDEPENDS_packagegroup-rdk-media-common_append = " dibbler-client"
 RDEPENDS_packagegroup-rdk-media-common_append = " gst-external-plugin"
 
-RDEPENDS_packagegroup-rdk-media-common_append = "\
+RDEPENDS_packagegroup-rdk-media-common_append_morty = "\
    ${@bb.utils.contains("DISTRO_FEATURES", "bluez5", "bluez5-bluetoothd","",d)} \
+   "
+
+RDEPENDS_packagegroup-rdk-media-common_append = "\
    ${@bb.utils.contains("DISTRO_FEATURES", "blercudaemon", "asbluetoothrcu","",d)} \
    ${@bb.utils.contains("DISTRO_FEATURES", "rdkbrowser2", "rdkbrowser2","",d)} \
    "
 
-RDEPENDS_packagegroup-rdk-media-common_remove = "${@bb.utils.contains('DISTRO_FEATURES', 'ipclient', 'virtual/media-utils', '', d)}"
+RDEPENDS_packagegroup-rdk-media-common_remove_ipclient = "virtual/media-utils"

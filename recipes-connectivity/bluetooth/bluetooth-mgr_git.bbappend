@@ -1,10 +1,16 @@
-DEPENDS_remove = "${@bb.utils.contains('DISTRO_FEATURES', 'ipclient', 'virtual/media-utils', '', d)}"
-DEPENDS_remove = "${@bb.utils.contains('DISTRO_FEATURES', 'ipclient', 'audiocapturemgr',  '', d)}"
+DEPENDS_remove_ipclient = "virtual/media-utils"
+DEPENDS_remove_ipclient = "audiocapturemgr"
 
-RDEPENDS_${PN}_remove = "${@bb.utils.contains('DISTRO_FEATURES', 'ipclient', 'virtual/media-utils', '', d)}"
-RDEPENDS_${PN}_remove = "${@bb.utils.contains('DISTRO_FEATURES', 'ipclient', 'audiocapturemgr', '', d)} "
+RDEPENDS_${PN}_remove_ipclient = "virtual/media-utils"
+RDEPENDS_${PN}_remove_ipclient = "audiocapturemgr"
 
-EXTRA_OECONF_remove += " ${@bb.utils.contains("DISTRO_FEATURES", "ipclient", "${ENABLE_ACM} ${ENABLE_AC_RMF}", " ",d)}"
+EXTRA_OECONF_remove_ipclient = "${ENABLE_ACM}"
+EXTRA_OECONF_remove_ipclient = "${ENABLE_AC_RMF}"
 
-CFLAGS_remove = " ${@bb.utils.contains('DISTRO_FEATURES', 'ipclient', " ${@bb.utils.contains('RDEPENDS_${PN}',\
-                    'virtual/media-utils', ' -I${STAGING_INCDIR}/media-utils/audioCapture', ' ', d)}", ' ',d)}"
+CFLAGS_remove_ipclient = " ${@bb.utils.contains('RDEPENDS_${PN}', 'virtual/media-utils', ' -I${STAGING_INCDIR}/media-utils/audioCapture', ' ', d)}"
+
+do_install_append_ipclient() {
+    #remove audiocapturemgr service entry for ipclient from btmgr.service
+    bbnote "Modifying btmgr.service"
+    sed -i 's/audiocapturemgr.service/ /g' ${D}${systemd_system_unitdir}/btmgr.service
+}
