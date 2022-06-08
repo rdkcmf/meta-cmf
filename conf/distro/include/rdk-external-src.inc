@@ -196,6 +196,7 @@ EXTERNALSRC_pn-xdialserver = "${@'${RDK_ROOT_PATH}/components/opensource/xdialse
 EXTERNALSRC_pn-xr-atomic = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xr_atomic' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xr_atomic')) else ''}"
 EXTERNALSRC_pn-xr-fdc = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xr-fdc' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xr-fdc')) else ''}"
 EXTERNALSRC_pn-xr-mq = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xr_mq' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xr_mq')) else ''}"
+EXTERNALSRC_pn-xr-speech-avs = "${@'${RDK_ROOT_PATH}/rdk/components/generic/avs/xr-speech-avs-sdk/xr-speech-avs' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/avs/xr-speech-avs-sdk')) else ''}"
 EXTERNALSRC_pn-xr-speech-router = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xr-speech-router' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xr-speech-router')) else ''}"
 EXTERNALSRC_pn-xr-speech-vrex = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xr-speech-vrex' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xr-speech-vrex')) else ''}"
 EXTERNALSRC_pn-xr-sm-engine = "${@'${RDK_ROOT_PATH}/rdk/components/generic/xrpSMEngine' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/xrpSMEngine')) else ''}"
