@@ -20,3 +20,4 @@ RDEPENDS_packagegroup-rdk-ccsp-broadband_append = " ${@bb.utils.contains('DISTRO
 RDEPENDS_packagegroup-rdk-ccsp-broadband_append = " rdk-vlanmanager"
 RDEPENDS_packagegroup-rdk-ccsp-broadband_append = " ${@bb.utils.contains('DISTRO_FEATURES', 'rdkb_xdsl_ppp_manager', 'rdk-ppp-manager', '', d)}"
 RDEPENDS_packagegroup-rdk-ccsp-broadband_append = " rdk-fwupgrade-manager"
+RDEPENDS_packagegroup-rdk-ccsp-broadband_append = " ${@bb.utils.contains('DISTRO_FEATURES', 'easymesh-controller', 'rdk-easymesh-controller', '', d)}"
