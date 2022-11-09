@@ -116,11 +116,11 @@ BBLAYERS =+ "\${RDKROOT}/meta-rdk-voice-sdk"
 EOF
 fi
 
-# Add meta-srcmap only if not already present.
-if [ $(grep '^BBLAYERS' conf/bblayers.conf | grep -c 'meta-srcmap') -eq 0 -a -d  $TOP_DIR/meta-srcmap ]
+# Add meta-spdxscanner only if not already present.
+if [ $(grep '^BBLAYERS' conf/bblayers.conf | grep -c 'meta-spdxscanner') -eq 0 -a -d  $TOP_DIR/meta-spdxscanner ]
 then
     cat >> conf/bblayers.conf <<EOF
-BBLAYERS =+ "\${RDKROOT}/meta-srcmap"
+BBLAYERS =+ "\${RDKROOT}/meta-spdxscanner"
 EOF
 fi
 
