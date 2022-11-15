@@ -50,6 +50,7 @@ EXTERNALSRC_pn-ccsp-xconf = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccs
 EXTERNALSRC_pn-ccsp-xdns = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspXDNS' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CcspXDNS')) else ''}"
 EXTERNALSRC_pn-cobalt-plugin = "${@'${RDK_ROOT_PATH}/rdk/components/generic/cobalt/plugin' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/cobalt')) else ''}"
 EXTERNALSRC_pn-configmgr = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/configMgr' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/components/opensource/configMgr')) else ''}"
+EXTERNALSRC_pn-core-net-lib = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CoreNetLib' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/CoreNetLib')) else ''}"
 EXTERNALSRC_pn-cpuprocanalyzer = "${@'${RDK_ROOT_PATH}/rdk/components/generic/cpuprocanalyzer' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/cpuprocanalyzer')) else ''}"
 EXTERNALSRC_pn-crashlog = "${@'${RDK_ROOT_PATH}/rdk/components/generic/crashlog' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/crashlog')) else ''}"
 EXTERNALSRC_pn-crashupload = "${@'${RDK_ROOT_PATH}/rdk/components/generic/crashupload' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/crashupload')) else ''}"
