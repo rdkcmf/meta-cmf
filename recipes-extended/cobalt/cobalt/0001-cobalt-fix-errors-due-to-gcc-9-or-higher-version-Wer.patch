@@ -11,7 +11,6 @@ resolved for the errors
   * -Werror=ignored-qualifiers
 
 Source: RDK-Community
-License: Apache-2.0 & BSD-3
 Upstream-Status: pending
 
 Signed-off-by: Moorthy Baskar <moorthy.bs@ltts.com>

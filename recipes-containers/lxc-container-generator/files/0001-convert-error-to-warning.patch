@@ -2,7 +2,6 @@ Date: Tue, 14 May 2019 14:23:58 -0400
 
 From: afe060dcb14a2f7edb51be75faef11c47f65f89e Mon Sep 17 00:00:00 2001
 Source: COMCAST
-License: Apache-2.0
 Upstream-Status: N/A
 Subject: [PATCH] DELIA-31917: Converted Error to Warning.
 
