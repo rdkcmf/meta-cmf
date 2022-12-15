@@ -124,6 +124,7 @@ EXTERNALSRC_pn-power-state-monitor = "${@'${RDK_ROOT_PATH}/rdk/components/generi
 EXTERNALSRC_pn-powermgr = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/PowerManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/PowerManager')) else ''}"
 EXTERNALSRC_pn-pwstream = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/pwstream' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/components/opensource/pwstream')) else ''}"
 EXTERNALSRC_pn-qtapp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/trm/qtapp/srv' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/trm')) else ''}"
+EXTERNALSRC_pn-rbus = "${@'${RDK_ROOT_PATH}/components/opensource/rbus' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/rbus')) else ''}"
 EXTERNALSRC_pn-rdk-cellularmanager = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkCellularManager' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkCellularManager')) else ''}"
 EXTERNALSRC_pn-rdk-diagnostics = "${@'${RDK_ROOT_PATH}/rdk/components/generic/diagnostics/QAM_device' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/diagnostics')) else ''}"
 EXTERNALSRC_pn-rdk-easymesh-controller = "${@'${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkEasyMeshController' if (os.path.isdir('${RDK_ROOT_PATH}/rdkb/components/opensource/ccsp/RdkEasyMeshController')) else ''}"
