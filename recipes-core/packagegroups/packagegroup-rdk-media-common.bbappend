@@ -39,3 +39,6 @@ RDEPENDS_packagegroup-rdk-media-common_append = "\
    "
 
 RDEPENDS_packagegroup-rdk-media-common_remove_ipclient = "virtual/media-utils"
+
+# smartmon does not build in voice build due to boost issues.
+RDEPENDS_packagegroup-rdk-media-common_remove_voice = " smartmon"
