@@ -159,6 +159,7 @@ EXTERNALSRC_pn-rmfgenericheaders = "${@'${RDK_ROOT_PATH}/rdk/components/generic/
 EXTERNALSRC_pn-rmfosal = "${@'${RDK_ROOT_PATH}/rdk/components/generic/mediaframework/osal' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/mediaframework')) else ''}"
 EXTERNALSRC_pn-rms = "${@'${RDK_ROOT_PATH}/rdkc/components/opensource/rms' if (os.path.isdir('${RDK_ROOT_PATH}/rdkc/components/opensource/rms')) else ''}"
 EXTERNALSRC_pn-rpcserver = "${@'${RDK_ROOT_PATH}/components/opensource/rpcserver' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/rpcserver')) else ''}"
+EXTERNALSRC_pn-rtremote = "${@'${RDK_ROOT_PATH}/components/opensource/rtRemote' if (os.path.isdir('${RDK_ROOT_PATH}/components/opensource/rtRemote')) else ''}"
 EXTERNALSRC_pn-runsnmp = "${@'${RDK_ROOT_PATH}/rdk/components/generic/mediaframework/snmp/runsnmp' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/mediaframework')) else ''}"
 EXTERNALSRC_pn-si-cache-parser = "${@'${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/si_cache_parser' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/sys_mon_tools/si_cache_parser')) else ''}"
 EXTERNALSRC_pn-skillmapper = "${@'${RDK_ROOT_PATH}/rdk/components/generic/avs/alexa_skill_mapper' if (os.path.isdir('${RDK_ROOT_PATH}/rdk/components/generic/avs/alexa_skill_mapper')) else ''}"
