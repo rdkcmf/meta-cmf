@@ -32,6 +32,17 @@ python do_git_tag_components() {
         out, return_code = runCommand(cmd, path)
         return out
 
+    def create_and_push_tags(path, name, tag, push):
+        bb.plain("NOTE: Tagging component %s with %s" % (name, tag))
+        bb.note("in source directory %s\n" % path)
+        createdTag = create_tag(path, tag)
+        bb.note("Created Tag %s\n" % createdTag)
+        if push == "True":
+            pushedTag = push_tag(path, tag)
+            bb.note("Pushed Tag %s\n" % pushedTag)
+        else:
+            bb.plain("NOTE: DRYRUN, tag not pushed")
+
     name = d.getVar('PN', True)
     workdir = d.getVar('S', True)
     gitTag = d.getVar('GIT_TAG', True)
@@ -46,26 +57,15 @@ python do_git_tag_components() {
             # Check the git remote points to RDK Central
             remotes = get_remotes(workdir)
             if b'code.rdkcentral.com' in remotes:
-                bb.plain("NOTE: Tagging component %s with %s" % (name, gitTag))
-                bb.note("in source directory %s\n" % workdir)
-                createdTag = create_tag(workdir, gitTag)
-                bb.note("Created Tag %s\n" % createdTag)
-                if pushTag == "True":
-                    pushedTag = push_tag(workdir, gitTag)
-                    bb.note("Pushed Tag %s\n" % pushedTag)
+                create_and_push_tags(workdir, name, gitTag, pushTag)
+
         else:
             # Try to find all the .git subdirectories recursively
             subdirs = [x[0] for x in os.walk(workdir)]
             for subdir in subdirs:
                 dirName = os.path.basename(subdir)
                 if dirName == ".git":
-                    bb.plain("NOTE: Tagging component %s with %s" % (name, gitTag))
-                    bb.note("in source directory %s\n" % subdir)
-                    createdTag = create_tag(subdir, gitTag)
-                    bb.note("Created Tag %s\n" % createdTag)
-                    if pushTag == "True":
-                        pushedTag = push_tag(subdir, gitTag)
-                        bb.note("Pushed Tag %s\n" % pushedTag)
+                    create_and_push_tags(subdir, name, gitTag, pushTag)
     else:
         bb.warn("Git TAG not specified OR no WORKDIR")
 }
