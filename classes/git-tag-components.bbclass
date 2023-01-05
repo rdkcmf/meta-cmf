@@ -51,20 +51,14 @@ python do_git_tag_components() {
     # Check git tag has been specified and WORKDIR exists
     if gitTag and pushTag and os.path.isdir(workdir):
 
-        # Check that the component is a git component
-        if check_git_dir(workdir):
+        # Try to find all the .git subdirectories recursively
+        subdirs = [x[0] for x in os.walk(workdir)]
+        for subdir in subdirs:
+            dirName = os.path.basename(subdir)
+            if dirName == ".git":
 
-            # Check the git remote points to RDK Central
-            remotes = get_remotes(workdir)
-            if b'code.rdkcentral.com' in remotes:
-                create_and_push_tags(workdir, name, gitTag, pushTag)
-
-        else:
-            # Try to find all the .git subdirectories recursively
-            subdirs = [x[0] for x in os.walk(workdir)]
-            for subdir in subdirs:
-                dirName = os.path.basename(subdir)
-                if dirName == ".git":
+                # Check that the component is a git component
+                if check_git_dir(workdir):
                     create_and_push_tags(subdir, name, gitTag, pushTag)
     else:
         bb.warn("Git TAG not specified OR no WORKDIR")
