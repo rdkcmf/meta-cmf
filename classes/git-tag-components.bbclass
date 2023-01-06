@@ -13,7 +13,7 @@ python do_git_tag_components() {
         return out, return_code
 
     def check_git_dir(path):
-        cmd = ["git", "rev-parse", "--is-inside-work-tree"]
+        cmd = ["git", "rev-parse", "--is-inside-git-dir"]
         out, return_code = runCommand(cmd, path)
         return out
 
@@ -58,7 +58,7 @@ python do_git_tag_components() {
             if dirName == ".git":
 
                 # Check that the component is a git component
-                if check_git_dir(workdir):
+                if check_git_dir(subdir):
                     create_and_push_tags(subdir, name, gitTag, pushTag)
     else:
         bb.warn("Git TAG not specified OR no WORKDIR")
